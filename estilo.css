@@ -126,12 +126,12 @@ das listas quando passo o mouse por cima*/
 }
 
 /*Estilização do Footer*/
-footer{
+/*footer{
     text-align: center;
     margin: 0 auto;
     background: url("bg.webp");
     padding: 0px 0 20px 0;
-}
+}*/
 .copyright{
     font-size: 12px;
     margin:10px;
@@ -417,17 +417,24 @@ footer{
 }
 
 .btn{
-    width: 100%;
+    width: 50%;
     height: 45px;
     background: #162938;
     border: none;
     outline: none;
-    border-radius: 6px;
+    border-radius: 60px;
     cursor: pointer;
     font-size: 1em;
     color: #ffff;
     font-weight: 500;
 }
+
+.btn:hover{
+    transform-origin: left;
+    background: #A52a2a;
+    transform: scaleX(1);
+}
+
 .conta{
     color: #3b688b;
     text-decoration: none;

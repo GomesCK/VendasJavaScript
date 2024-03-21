@@ -59,7 +59,45 @@ function formatacao(valor) {
     return valor.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
 }
 
+var botaoAdicionar = document.querySelector(".btn");
 
+botaoAdicionar.addEventListener("click", function(event){
+    event.preventDefault();
+    console.log("Deu bom")
+});
+
+/*function Imprimir() {
+    var Tabela = document.querySelectorAll(".Tabela");
+    var linha = document.createElement("tr");
+    var coluna = document.createElement("td");
+    linha.appendChild(coluna);
+}*/
+
+function Imprimir() {
+  var Tabela = document.querySelector(".Tabela");
+  var linha = Tabela.insertRow(); // Inserir no final da tabela
+
+  var linha1 = linha.insertCell(0); // Inserir célula na nova linha
+  var linha2 = linha.insertCell(1);
+  var linha3 = linha.insertCell(2);
+  var linha4 = linha.insertCell(3);
+  var linha5 = linha.insertCell(4);
+
+  var nome = document.querySelector(".nome").value; // Obter valor dos campos do formulário
+  var prod = document.querySelector(".prod").value;
+  var quant = document.querySelector(".qtd").value;
+  var val = document.querySelector(".val").value;
+  var Tota = document.querySelector(".Tt").value;
+
+  linha1.textContent = nome;
+  linha2.textContent = prod;
+  linha3.textContent = quant;
+  linha4.textContent = val;
+  linha5.textContent = Tota;
+
+  // Limpar campos do formulário após a inserção
+  //form.reset();
+}
 
 
 

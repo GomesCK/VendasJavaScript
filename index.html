@@ -16,7 +16,7 @@
         </div>
     </header>
     <main>
-        <h1 class="titulo">Tabela de vendas</h1> <!-- onclick="this.innerHTML='Cliquei!!'" -->
+        <h1 class="titulo" >Tabela de vendas</h1> <!-- onclick="this.innerHTML='Cliquei!!'" -->
         <section class="Seção">
             <table border="1" class="Tabela">
                 <tr class="Marcações">
@@ -43,6 +43,28 @@
                 </tr>
             </table>
         </section>
+
+        <section class="AddEnc" title="AddEncomendas">
+            <h1 class="titulo-Enc">Adicionar nova encomenda</h1>
+        </section>
+
+        <form name="NovaEncomenda" method="set" action="" target="_blank" id="Formulario">
+            <fieldset>
+                <label for="Nm">Nome:</label>
+                <input type="text" class="nome" name="" class="input_padrao" required>
+
+                <label for="Pd">Produto:</label>
+                <input type="text" class="prod" name="" class="input_padrao" required>
+
+                <label for="qntd">Quantidade:</label>
+                <input type="number" class="qtd" name="" class="input_padrao" placeholder="">
+
+                <label for="vl">Valor unitário:</label>
+                <input type="number" class="val" name="" class="input_padrao" required>
+
+                <input type="submit" value="Salvar pedido" class="btn" onclick='Imprimir()'>
+            </fieldset>
+        </form>
         
     </main>
     <script src="Teste.js"></script>
