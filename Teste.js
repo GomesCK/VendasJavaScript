@@ -85,18 +85,17 @@ function Imprimir() {
 
   var nome = document.querySelector(".nome").value; // Obter valor dos campos do formulário
   var prod = document.querySelector(".prod").value;
-  var quant = document.querySelector(".qtd").value;
-  var val = document.querySelector(".val").value;
-  var Tota = document.querySelector(".Tt").value;
+  var quant = parseFloat(document.querySelector(".qtd").value);
+  var val = parseFloat(document.querySelector(".val").value);
 
   linha1.textContent = nome;
   linha2.textContent = prod;
   linha3.textContent = quant;
-  linha4.textContent = val;
-  linha5.textContent = Tota;
+  linha4.textContent = formatacao(val);
+  linha5.textContent = formatacao(calculaTotal(quant, val));
 
   // Limpar campos do formulário após a inserção
-  //form.reset();
+  form.reset();
 }
 
 
