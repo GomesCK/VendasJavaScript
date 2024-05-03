@@ -3,18 +3,21 @@
 var encomendas = document.querySelectorAll(".cliente");
 
 encomendas.forEach(function(linha){
-    linha.addEventListener("dbclick", function(){
+    linha.addEventListener("dblclick", function(){
         console.log("Duplo clique!");
         this.remove();
     });
 });*/
 
-var tabela = document.querySelector(".Tabela");
+var tabela = document.querySelector("table");
 
-tabela.addEventListener("dbclick", function(event){
-    //Captura a TR da TD que sofreu o duplo clique e remove
+tabela.addEventListener("dblclick", function(event){
+    
     event.target.parentNode.classList.add("fadeOut");
-    event.target.parentNode.remove();
+    setTimeout(function(){
+        //Captura a TR da TD que sofreu o duplo clique e remove
+        event.target.parentNode.remove();
+    }, 500);
+    
     console.log(event.target);
-    // this.remove();
 });
