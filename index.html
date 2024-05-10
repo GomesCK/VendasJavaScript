@@ -14,6 +14,8 @@
 		<main>
 			<section class="Seção">
 				<h2 class="titulo">Encomendas</h2>
+				<label for="filtrar-tabela">Filtrar:</label>
+				<input type="text" name="filtro" id="filtra-tabela" placeholder="Digite o nome do cliente">
 				<table border="1" class="Tabela">
 					<thead>
 						<tr>
@@ -28,8 +30,8 @@
 						<tr class="cliente">
 							<td class="info-nome">Margarete</td>
 							<td class="info-produto">Kit gravatas (4 peças) - Rosa</td>
-							<td class="info-qtde">L</td>
-							<td class="info-valor">30</td>
+							<td class="info-qtde">2</td>
+							<td class="info-valor"></td>
 							<td class="info-total">-</td>
 						</tr>
 						<tr class="cliente" >
@@ -101,5 +103,6 @@
 		<script src="js/calcula-total.js"></script>
 		<script src="js/form.js"></script>
 		<script src="js/remove-enc.js"></script>
+		<script src="js/filtrar.js"></script>
 	</body>
 </html>

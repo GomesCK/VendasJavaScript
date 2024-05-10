@@ -110,6 +110,21 @@ fieldset{
     margin-left: 20%;
 }
 
+.fadeOut{
+    opacity: 0;
+    transition: 1s;
+}
+
+#filtrar-tabela{
+    width: 19.5%;
+    height: 35px;
+    margin-bottom: 10px;
+}
+
+.invisivel{
+    display: none;
+}
+
 /*
 .navIndex{
     position: absolute;
