@@ -1,108 +1,79 @@
-<html lang="pt-br">
-	<head>
-		<meta charset="UTF-8">
-		<link href="img/icone.ico" rel="shortcut icon">
-		<title>Pereira e Franco - Alfaiataria</title>
-		<link rel="stylesheet" type="text/css" href="css/estilo.css">
-	</head>
-	<body>
-		<header class="headerIndex">
-			<div class="Princ">
-				<img src="img/P-removebg-preview.png" class="logo">
-			</div>
-		</header>
-		<main>
-			<section class="Seção">
-				<h2 class="titulo">Encomendas</h2>
-				<label for="filtrar-tabela">Filtrar:</label>
-				<input type="text" name="filtro" id="filtra-tabela" placeholder="Digite o nome do cliente">
-				<table border="1" class="Tabela">
-					<thead>
-						<tr>
-							<th>Nome</th>
-							<th>Produto</th>
-							<th>Quantidade</th>
-							<th>Valor Unitário</th>
-							<th>Total</th>
-						</tr>
-					</thead>
-					<tbody id="tabela-clientes">
-						<tr class="cliente">
-							<td class="info-nome">Margarete</td>
-							<td class="info-produto">Kit gravatas (4 peças) - Rosa</td>
-							<td class="info-qtde">2</td>
-							<td class="info-valor"></td>
-							<td class="info-total">-</td>
-						</tr>
-						<tr class="cliente" >
-							<td class="info-nome">Carolina</td>
-							<td class="info-produto">Kit de gravatas (3 peças) - Azul</td>
-							<td class="info-qtde">2</td>
-							<td class="info-valor">50</td>
-							<td class="info-total">-</td>
-						</tr>
-						<tr class="cliente">
-							<td class="info-nome">Clarisse</td>
-							<td class="info-produto">Gravata borboleta feminina</td>
-							<td class="info-qtde">3</td>
-							<td class="info-valor">30</td>
-							<td class="info-total">-</td>
-						</tr>
-						<tr class="cliente">
-							<td class="info-nome">Jonas</td>
-							<td class="info-produto">Terno masculino completo</td>
-							<td class="info-qtde">2</td>
-							<td class="info-valor">2000</td>
-							<td class="info-total">-</td>
-						</tr>
-					</tbody>
-				</table>
-				<!--Formulário de inclusão de encomendas -->
-			<section class="AddEnc">
-			<h2 id="titulo-Enc">Adicionar nova encomenda</h2>
-			<ul id="mensagens-erro"></ul>
-			<form id="form-adiciona">
-				<fieldset>
-					<div class="grupo">
-						<label for="nome">Nome:</label>
-						<input type="text" id="nome" name="nome" placeholder="Digite o nome do(a) cliente" class="campo" required>
-					</div>
-					<div class="grupo">
-						<label for="qtde">Qtde:</label>
-						<input type="number" id="qtde" name="qtde" placeholder="Digite a quantidade encomendada" class="campo campo-medio" required>
-					</div>
-					<div class="grupo">
-						<label for="produto">Produto:</label>
-						<select id="produto" name="produto" class="campo campo-medio">
-							<option value="">Selecione</option>
-							<option>Kit de gravatas (4 peças) - Rosa</option>
-							<option>Kit de gravatas (4 peças) - Amarelo</option>
-							<option>Kit de gravatas (4 peças) - Verde</option>
-							<option>Kit de gravatas (3 peças) - Azul</option>
-							<option>Kit de gravatas (3 peças) - Rosa</option>
-							<option>Kit de gravatas (3 peças) - Amarelo</option>
-							<option>Kit de gravatas (3 peças) - Vermelho</option>
-							<option>Terno masculino completo - Preto</option>
-							<option>Terno masculino completo - Vermelha</option>
-							<option>Terno feminino completo - Rosa</option>
-							<option>Terno masculino completo - Cinza</option>
-							<option>Terno feminino completo - Preto</option>
-						</select>
-					</div>
-					<div class="grupo">
-						<label for="unitario">R$ Unitário:</label>
-						<input type="number" id="unitario" name="unitario" placeholder="Digite o valor unitário do produto" class="campo campo-medio" required>
-					</div>
-	
-					<!-- <button id="adicionar-encomenda" class="botao bto-principal">Adicionar</button> -->
-					<input type="submit" id="adicionar-encomenda" class="botao bto-principal">
-				</fieldset>				
-			</form>
-		</section>
-		</main>
-		<script src="js/calcula-total.js"></script>
-		<script src="js/form.js"></script>
-		<script src="js/remove-enc.js"></script>
-		<script src="js/filtrar.js"></script>
-	</body>
+<html>
+
+<head>
+    <!--Toda parte não visual do código-->
+    <link href="estilo.css" rel="stylesheet">
+    <link href="icone.ico" rel="shortcut icon">
+    <meta charset="UTF-8" />
+    <!-- Título que será mostrado na Aba -->
+    <title></title>
+</head>
+
+<body>
+    <header class="headerIndex">
+        <div class="Princ">
+            <img class="Logo" src="P-removebg-preview.png" title="Logo">
+        </div>
+    </header>
+    <main>
+        <h1 class="titulo" >Tabela de vendas</h1> <!-- onclick="this.innerHTML='Cliquei!!'" -->
+        <section class="Seção">
+            <table border="1" class="Tabela">
+                <tr class="Marcações">
+                    <td>Nome</td>
+                    <td>Produto</td>
+                    <td>Quantidade</td>
+                    <td>Valor</td>
+                    <td>Total</td>
+                </tr>
+    
+                <tr class="Compradores">
+                    <td class="Nm">Clarisse</td>
+                    <td class="Pd">Gravata borboleta feminina</td>
+                    <td class="qntd">3</td>
+                    <td class="vl">28,57</td>
+                    <td class="Tt"></td>
+                </tr>
+                <tr class="Compradores">
+                    <td class="Nm">Jonas</td>
+                    <td class="Pd">Terno masculino completo</td>
+                    <td class="qntd">2</td>
+                    <td class="vl">2000</td>
+                    <td class="Tt"></td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="AddEnc" title="AddEncomendas">
+            <h1 class="titulo-Enc">Adicionar nova encomenda</h1>
+        </section>
+
+        <form name="NovaEncomenda" method="set" id="Formulario">
+            <fieldset>
+                <label for="Nm">Nome:</label>
+                <input type="text" class="nome" name="" class="input_padrao" required>
+
+                <label for="Pd">Produto:</label>
+                <input type="text" class="prod" name="" class="input_padrao" required>
+
+                <label for="qntd">Quantidade:</label>
+                <input type="number" class="qtd" name="" class="input_padrao" placeholder="">
+
+                <label for="vl">Valor unitário:</label>
+                <input type="number" class="val" name="" class="input_padrao" required>
+
+                <input type="submit" value="Salvar pedido" class="btn" onclick='Imprimir()'>
+            </fieldset>
+        </form>
+        
+    </main>
+    <script src="js/Teste.js"></script>
+
+    <footer class="footer">
+        <img src="icone.ico" alt="Moda Virtual" class="logo_footer">
+        <p class="copyright">&copy;Todos os direitos reservados para a P&F.</p>
+    </footer>
+
+</body>
+
 </html>
