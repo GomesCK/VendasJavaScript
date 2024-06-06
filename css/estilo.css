@@ -74,7 +74,7 @@ body{
     text-align: center;
 }
 
-#adicionar-encomenda{
+.botao{
     width: 50%;
     height: 45px;
     background: #162938;
@@ -87,11 +87,12 @@ body{
     font-weight: 500;
 }
 
-#adicionar-encomenda:hover{
+.botao:hover{
     transform-origin: left;
     background: #A52a2a;
     transform: scaleX(1);
 }
+
 
 #form{
     margin-top: 20px;
@@ -126,6 +127,11 @@ fieldset{
 }
 
 /*
+
+#buscarEncomenda{
+    position: below;
+}
+
 .navIndex{
     position: absolute;
     right: 0;

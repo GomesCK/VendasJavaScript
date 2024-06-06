@@ -58,11 +58,12 @@ function montaTR(novaEncomenda){
 
     var tr = document.createElement("tr");
 
-    tr.appendChild(montaTD(novaEncomenda.nome));
-    tr.appendChild(montaTD(novaEncomenda.produto));
-    tr.appendChild(montaTD(novaEncomenda.qtde));
-    tr.appendChild(montaTD(formataValor(parseFloat(novaEncomenda.unitario))));
-    tr.appendChild(montaTD(calculaTotal(novaEncomenda.qtde, novaEncomenda.unitario)));
+    tr.classList.add("cliente");
+    tr.appendChild(montaTD(novaEncomenda.nome)).classList.add("info-nome");
+    tr.appendChild(montaTD(novaEncomenda.produto)).classList.add("info-produto");
+    tr.appendChild(montaTD(novaEncomenda.qtde)).classList.add("info-qtde");
+    tr.appendChild(montaTD(formataValor(parseFloat(novaEncomenda.unitario)))).classList.add("info-valor");
+    tr.appendChild(montaTD(calculaTotal(novaEncomenda.qtde, novaEncomenda.unitario))).classList.add("info-total");
 
     return tr;
 }
